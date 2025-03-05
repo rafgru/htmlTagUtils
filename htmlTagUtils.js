@@ -14,7 +14,7 @@ export const tagCollectionPicker = (tags) => {
 
 // To update tag class list
 
-updateClassList (element, action, className) {
+export const updateClassList = (element, action, className) => {
     if (!element) {
         console.error('Element nie istnieje');
         return;
