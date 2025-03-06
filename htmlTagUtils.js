@@ -16,7 +16,7 @@ export const tagCollectionPicker = (tags) => {
 
 export const updateClassList = (element, action, className) => {
     if (!element) {
-        console.error('Element nie istnieje');
+        console.error('updateClassList: Element nie istnieje');
         return;
     }
 
@@ -34,4 +34,20 @@ export const updateClassList = (element, action, className) => {
             console.error(`Nieznana akcja: ${action}`);
     }
 };
+
+// To get element atributte
+
+export const getElementAttribute = (element, attribute) => {
+    if (!element) {
+        console.error(`getAttribute: Element: ${element} - nie istnieje`);
+        return;
+    }
+    const AttributeValue =  element.getAttribute(attribute);
+    
+    if(AttributeValue === null){
+        console.log(`getElementAttribute: Atrybut ${attribute} - nie istnieje na danym elemencie: ${element}`)
+    }
+
+    return AttributeValue
+}
 
