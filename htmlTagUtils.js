@@ -12,11 +12,18 @@ export const tagCollectionPicker = (tags) => {
     return tagCollection 
 }
 
+// To get nav tag by Id
+
+export const getNavElementById = (elementId) =>{
+    const element = document.querySelector(`header nav a[href="#${elementId}"]`)
+    return element
+}
+
 // To update tag class list
 
 export const updateClassList = (element, action, className) => {
     if (!element) {
-        console.error('updateClassList: Element nie istnieje');
+        console.error(`updateClassList: ${element} nie istnieje`);
         return;
     }
 
@@ -35,7 +42,7 @@ export const updateClassList = (element, action, className) => {
     }
 };
 
-// To get element atributte
+// To get element attribute
 
 export const getElementAttribute = (element, attribute) => {
     if (!element) {
